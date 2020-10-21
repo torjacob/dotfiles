@@ -1,3 +1,2 @@
 # dotfiles
-
-dotfiles / configs
+Configs for different programs I use.
