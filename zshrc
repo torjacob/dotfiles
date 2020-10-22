@@ -1,5 +1,7 @@
 # Path expansion
 path+=('/home/torjacob/repos/personal/scripts/statusbar')
+path+=('/home/torjacob/.local/bin/')
+path+=('/home/torjacob/repos/personal/scripts')
 export PATH
 
 # Lines configured by zsh-newuser-install
