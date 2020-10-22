@@ -5,5 +5,7 @@ redshift &
 batsignal &
 picom &
 sudo openvpn --config /etc/openvpn/mullvad_ch_zrh.conf &
+mpd &
+mopidy &
 lxqt-connman-applet &
 exec dwm
