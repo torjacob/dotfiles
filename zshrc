@@ -1,3 +1,7 @@
+# Path expansion
+path+=('/home/torjacob/repos/personal/scripts/statusbar')
+export PATH
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.config/zsh/histfile
 HISTSIZE=10000
