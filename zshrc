@@ -24,7 +24,9 @@ zstyle ':vcs_info:*' enable git
 
 ### ALIASES ###
 
-alias ls='ls --color=auto'
+alias ls='exa'
+alias la='exa -a'
+alias ll='exa -la'
 alias sysup='sudo pacman -Syu'
 alias tsm='transmission-remote'
 alias compress='zip -r'
