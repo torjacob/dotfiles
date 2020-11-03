@@ -15,5 +15,5 @@ source $HOME/.config/nvim/plugins/coc.vim " Autocomplete
 source $HOME/.config/nvim/plugins/lightline.vim " Statusbar
 source $HOME/.config/nvim/plugins/emmet-vim.vim " emmet
 source $HOME/.config/nvim/plugins/better-whitespace.vim " better-whitespace
-
+source $HOME/.config/nvim/plugins/NERDTree.vim " NERDTree
 

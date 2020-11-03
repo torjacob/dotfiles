@@ -4,8 +4,9 @@ dwmblocks &
 redshift &
 batsignal &
 picom &
-sudo openvpn --config /etc/openvpn/mullvad_ch_zrh.conf &
 mopidy &
 mopidy-cover-daemon &
-lxqt-connman-applet &
+nm-applet &
+pa-applet &
+sudo rtcwake -m mem -s 1 &
 exec dwm
