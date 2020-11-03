@@ -18,24 +18,22 @@ compinit
 # End of lines added by compinstall
 
 # Prompt
-precmd(){
-  autoload -Uz vcs_info
-  precmd_vcs_info() { vcs_info }
-  precmd_functions+=( precmd_vcs_info )
-  setopt prompt_subst
-
-  # LEFT='$(%f %B%F{240}%~%f%b )'
-  # RIGHT='$(\$vcs_info_msg_0_)'
-  local LEFT='%~'
-  local RIGHTWIDTH=$(($COLUMNS-${#LEFT}))
-
-  zstyle ':vcs_info:git:*' formats '%F{240}%r %B%F{240} %b'
-  zstyle ':vcs_info:*' enable git
-
-  echo $LEFT${(l:$RIGHTWIDTH:)RIGHT}
+# Load version control information
+autoload -Uz vcs_info
+precmd() {
+  vcs_info;
+  pwdsize=${#${(%):-%~}}
+  gitsize=${#${vcs_info_msg_0_}}
 }
+# Format the vcs_info_msg_0_ variable
+zstyle ':vcs_info:git:*' formats '%r  %b'
+setopt PROMPT_SUBST
 
-PROMPT='﬌ '
+PROMPT='%F{240}%B%~${(r:$((COLUMNS-($pwdsize+$gitsize))):)}$vcs_info_msg_0_
+﬌%f%b '
+RPROMPT='%F{240}%T%f'
+
+
 
 # Aliases
 source '/home/torjacob/repos/personal/dotfiles/zsh/aliases'
