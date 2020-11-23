@@ -1,0 +1,14 @@
+[user]
+	email = torjne@stud.ntnu.no
+	name = Tor Jacob Neple
+[core]
+	editor = nvim
+[alias]
+	co = checkout
+	cob = checkout -b
+	ec = config --global -e
+	cm = !git add -A && git commit -m
+	up = !git pull --prune $@ && git submodule update --init --recursive
+	save = !git add -A && git commit -m 'SAVEPOINT'
+  wip = !git add -u && git commit -m 'WIP'
+
