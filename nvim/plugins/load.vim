@@ -32,5 +32,6 @@ call plug#begin()
     Plug 'tpope/vim-eunuch'
     " BEST colorscheme ever
     Plug 'gruvbox-community/gruvbox'
-
+    " IndentLine for Python
+    Plug 'Yggdroot/indentLine'
 call plug#end()
