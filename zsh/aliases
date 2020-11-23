@@ -26,4 +26,7 @@ alias vim='nvim'
 alias vi='nvim'
 alias v='nvim'
 
-alias nvimconf='nvim ~/dev/dotfiles/nvim/'
+alias nvimconf='nvim ~/repos/personal/dotfiles/nvim/'
+
+# GIT aliases
+alias gua='git remote | xargs -L1 git push --all'
