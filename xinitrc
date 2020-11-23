@@ -8,5 +8,6 @@ mopidy &
 mopidy-cover-daemon &
 nm-applet &
 pa-applet &
+blueman-applet &
 sudo rtcwake -m mem -s 1 &
 exec dwm
