@@ -10,5 +10,4 @@
 	cm = !git add -A && git commit -m
 	up = !git pull --prune $@ && git submodule update --init --recursive
 	save = !git add -A && git commit -m 'SAVEPOINT'
-  wip = !git add -u && git commit -m 'WIP'
-
+	wip = !git add -u && git commit -m 'WIP'
