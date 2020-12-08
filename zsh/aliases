@@ -10,7 +10,7 @@ alias ytcdl='youtube-dl -f "bestvideo[height>=720]+bestaudio/best" -ciw -o "%(ti
 
 alias ds='du -csh'
 alias dss='du -hs * | sort -h'
-alias dts='dss; ds'
+alias dts='dss; ds; df -h /'
 
 # Ultralist aliases
 alias ull='ultralist list'
