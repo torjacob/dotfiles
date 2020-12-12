@@ -1,3 +1,7 @@
+let g:tex_flavor = 'latex'
+let g:polyglot_disabled = ['latex']
+let g:vimtex_compiler_progname = 'nvr'
+
 " Loading Plugins
 source $HOME/.config/nvim/plugins/load.vim
 
@@ -10,10 +14,10 @@ source $HOME/.config/nvim/colorscheme/gruvbox.vim " OH YEAH!
 
 " Plugin Config
 source $HOME/.config/nvim/plugins/sneak.vim " Quickly search for next instance of something
-" source $HOME/.config/nvim/plugins/vim-rainbow.vim " Colored pairs
 source $HOME/.config/nvim/plugins/coc.vim " Autocomplete
 source $HOME/.config/nvim/plugins/lightline.vim " Statusbar
 source $HOME/.config/nvim/plugins/emmet-vim.vim " emmet
 source $HOME/.config/nvim/plugins/better-whitespace.vim " better-whitespace
 source $HOME/.config/nvim/plugins/NERDTree.vim " NERDTree
-source $HOME/.config/nvim/plugins/indentLine.vim " NERDTree
+source $HOME/.config/nvim/plugins/indentLine.vim " indentline for python
+source $HOME/.config/nvim/plugins/vim-latex-live-preview.vim " LaTeX Preview

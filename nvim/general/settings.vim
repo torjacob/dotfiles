@@ -35,7 +35,7 @@ set autoindent
 set noshowmode
 set conceallevel=0
 
-set updatetime=300
+set updatetime=100
 set timeoutlen=500
 
 set clipboard=unnamedplus

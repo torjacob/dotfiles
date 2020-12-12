@@ -5,16 +5,18 @@ call plug#begin()
     Plug 'shinchu/lightline-gruvbox.vim'
     " Filetree
     Plug 'preservim/nerdtree'
+    " LaTex
+    Plug 'lervag/vimtex'
     " Better Syntax
     Plug 'sheerun/vim-polyglot'
     " Surround selected text & more
     Plug 'tpope/vim-surround'
     " Auto Pairs
     Plug 'jiangmiao/auto-pairs'
-    " Colored Pairs
-    " Plug 'frazrepo/vim-rainbow'
     " Sneaky Sneaky
     Plug 'justinmk/vim-sneak'
+    " Live Previewing LaTeX PDF Output
+    Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
     " Autocomplete
     Plug 'neoclide/coc.nvim', { 'branch': 'release' }
     " Snippets
@@ -34,4 +36,11 @@ call plug#begin()
     Plug 'gruvbox-community/gruvbox'
     " IndentLine for Python
     Plug 'Yggdroot/indentLine'
+    " Show diffs (Git)
+    Plug 'mhinz/vim-signify'
+    " Devicons
+    Plug 'ryanoasis/vim-devicons'
+    " Colors for Nerdtree
+    Plug 'vwxyutarooo/nerdtree-devicons-syntax'
+
 call plug#end()
