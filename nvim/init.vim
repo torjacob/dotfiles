@@ -1,23 +1,79 @@
-let g:tex_flavor = 'latex'
-let g:polyglot_disabled = ['latex']
-let g:vimtex_compiler_progname = 'nvr'
+" TJs INIT.VIM
 
-" Loading Plugins
-source $HOME/.config/nvim/plugins/load.vim
+" Loading and configuring plugins
+source $HOME/.config/nvim/plugins.vim
 
-" General Config
-source $HOME/.config/nvim/general/settings.vim " Settings
-source $HOME/.config/nvim/keys/mappings.vim " Keybinds
+" General settings
+let g:mapleaderkey = "\<Space>"
 
-" Colorscheme
-source $HOME/.config/nvim/colorscheme/gruvbox.vim " OH YEAH!
+syntax enable
+syntax on
+filetype plugin on
 
-" Plugin Config
-source $HOME/.config/nvim/plugins/sneak.vim " Quickly search for next instance of something
-source $HOME/.config/nvim/plugins/coc.vim " Autocomplete
-source $HOME/.config/nvim/plugins/lightline.vim " Statusbar
-source $HOME/.config/nvim/plugins/emmet-vim.vim " emmet
-source $HOME/.config/nvim/plugins/better-whitespace.vim " better-whitespace
-source $HOME/.config/nvim/plugins/NERDTree.vim " NERDTree
-source $HOME/.config/nvim/plugins/indentLine.vim " indentline for python
-source $HOME/.config/nvim/plugins/vim-latex-live-preview.vim " LaTeX Preview
+set hidden
+
+set encoding=UTF-8
+set fileencoding=UTF-8
+
+set pumheight=10
+
+set background=dark
+set t_Co=256
+set cursorline
+set colorcolumn=80
+
+set linebreak
+
+set number
+set relativenumber
+
+set splitbelow
+set splitright
+
+set showtabline=2 " Don't relly know what i prefer
+set tabstop=2
+set shiftwidth=2
+set smarttab
+set expandtab
+
+set smartindent
+set autoindent
+
+set noshowmode
+set conceallevel=0
+
+set updatetime=100
+set timeoutlen=500
+
+set clipboard=unnamedplus
+
+cmap w!! w !sudi tee %
+
+" Keybindings
+
+" Use alt + hjkl to resize windows
+nnoremap <M-j>    :resize -2<CR>
+nnoremap <M-k>    :resize +2<CR>
+nnoremap <M-h>    :vertical resize -2<CR>
+nnoremap <M-l>    :vertical resize +2<CR>
+
+" TAB in general mode will move to text buffer
+nnoremap <TAB> gt
+" SHIFT-TAB will go back
+nnoremap <S-TAB> gT
+
+" <TAB>: completion.
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" Better tabbing
+vnoremap < <gv
+vnoremap > >gv
+
+" Better window navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Autocommands
+au! BufWritePost $MYVIMRC source % " Automatically sourcing init.vim
