@@ -1,4 +1,15 @@
 {
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "markdown",
+    "javascript",
+    "json",
+    "typescript",
+    "python",
+    "java",
+    "c"
+  ],
+  "prettier.singleQuote": true,
   "codeLens.enable": true,
   "python.jediEnabled": false
 }
