@@ -1,2 +1,1 @@
-# dotfiles
-Configs for different programs I use.
+# TJs Dotfiles
