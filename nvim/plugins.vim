@@ -31,6 +31,10 @@ call plug#begin() " Vim-plug
   Plug 'psliwka/vim-smoothie' " Smooth scrolling
   Plug 'junegunn/goyo.vim' " Focused mode
   Plug 'Yggdroot/indentLine' " Indent-lines for Python
+  Plug 'jiangmiao/auto-pairs' " Auto pairs
+
+  " Start screen
+  Plug 'mhinz/vim-startify'
 
 call plug#end()
 

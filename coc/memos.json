@@ -1331,11 +1331,10 @@
           "sysPrefix": "/usr",
           "fileHash": "fd231a82517fb42764f0a2bcd256757ad6d32c9e5cf65956fca5bc0ed4e4bf53e3efa31bc7b17b58cef51128d90f439b560c61d6f1566335731b523e47b6f5d6",
           "type": "Unknown",
-          "displayName": "Python 3.9.1 64-bit",
-          "__store": true
+          "displayName": "Python 3.9.1 64-bit"
         }
       },
-      "expiry": 1608307219682
+      "expiry": 1608329192861
     },
     "/usr/bin/python2.interpreter.Details.v7": {
       "data": {
