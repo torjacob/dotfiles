@@ -11,5 +11,7 @@
   ],
   "prettier.singleQuote": true,
   "codeLens.enable": true,
-  "python.jediEnabled": false
+  "python.jediEnabled": false,
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true
 }
