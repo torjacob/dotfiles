@@ -17,7 +17,6 @@ call plug#begin('~/.local/share/nvim/plugged') " Vim-plug
   Plug 'jreybert/vimagit' " View git status in buffer
   Plug 'mhinz/vim-signify' " Show changes in gutter
   Plug 'f-person/git-blame.nvim' " Show git blame lens
-  " Plug 'APZelos/blamer.nvim' " Show git blame
 
   " Autocomplete
   Plug 'neoclide/coc.nvim', { 'branch': 'release' } " Language server and more
@@ -35,6 +34,7 @@ call plug#begin('~/.local/share/nvim/plugged') " Vim-plug
   Plug 'Yggdroot/indentLine' " Indent-lines for Python
   Plug 'jiangmiao/auto-pairs' " Auto pairs
   Plug 'honza/vim-snippets' " Snippets
+  Plug 'airblade/vim-rooter' " Project root
 
   " Start screen
   Plug 'mhinz/vim-startify'
@@ -65,6 +65,7 @@ endif
 let g:gitblame_enabled = 0 " Disables lens by default (use GitBlameToggle)
 " Toggle lens with ctrl + g
 nnoremap <C-g> :GitBlameToggle <CR> 
+
 " CoC
 let g:coc_global_extensions = [
   \ 'coc-clangd',
