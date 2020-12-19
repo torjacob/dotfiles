@@ -16,6 +16,7 @@ call plug#begin() " Vim-plug
   Plug 'tpope/vim-fugitive' " Useful git commands in vim
   Plug 'jreybert/vimagit' " View git status in buffer
   Plug 'mhinz/vim-signify' " Show changes in gutter
+  Plug 'APZelos/blamer.nvim' " Show git blame
 
   " Autocomplete
   Plug 'neoclide/coc.nvim', { 'branch': 'release' } " Language server and more
@@ -54,6 +55,9 @@ let g:gruvbox_italics = 1
 let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
 hi Normal ctermbg=Black
+
+" Git blame
+let g:blamer_enabled = 1
 
 " CoC
 let g:coc_global_extensions = [
