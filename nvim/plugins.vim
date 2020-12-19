@@ -8,7 +8,7 @@ call plug#begin() " Vim-plug
   Plug 'ryanoasis/vim-devicons' " Icons for filetree
 
   " Colorscheme
-  Plug 'gruvbox-community/gruvbox' " Gruvbox
+  Plug 'christianchiarulli/nvcode-color-schemes.vim' " Gruvbox with treesitter support
   Plug 'shinchu/lightline-gruvbox.vim' " Gruvbox for statusbar
   Plug 'vwxyutarooo/nerdtree-devicons-syntax' " Colors for filetree
 
@@ -51,10 +51,13 @@ let g:NERDTreeDirArrowExpandable = '' " Hide arrows
 let g:NERDTreeDirArrowCollapsible = '' " Hide arrows
 
 " Gruvbox
-let g:gruvbox_italics = 1
-let g:gruvbox_contrast_dark = 'hard'
+syntax on
 colorscheme gruvbox
-hi Normal ctermbg=Black
+
+if (has("termguicolors")) " Checks for 24 bit color support
+    set termguicolors
+    hi LineNr ctermbg=NONE guibg=NONE
+endif
 
 " Git blame
 let g:blamer_enabled = 1

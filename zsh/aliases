@@ -18,8 +18,8 @@ alias ula='ultralist add'
 alias ulc='ultralist c'
 
 # Code aliases
-alias code='code .'
-alias c='code .'
+alias codium='codium .'
+alias c='codium .'
 
 # NVIM aliases
 alias vim='nvim'
