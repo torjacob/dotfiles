@@ -1,4 +1,4 @@
-call plug#begin() " Vim-plug
+call plug#begin('~/.local/share/nvim/plugged') " Vim-plug
 
   " Statusbar
   Plug 'itchyny/lightline.vim' " Lightweight statusbar
