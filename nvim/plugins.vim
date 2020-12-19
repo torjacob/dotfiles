@@ -31,10 +31,11 @@ call plug#begin('~/.local/share/nvim/plugged') " Vim-plug
   " Editor
   Plug 'psliwka/vim-smoothie' " Smooth scrolling
   Plug 'junegunn/goyo.vim' " Focused mode
-  Plug 'Yggdroot/indentLine' " Indent-lines for Python
+  Plug 'Yggdroot/indentLine' " Indent-lines (Python)
   Plug 'jiangmiao/auto-pairs' " Auto pairs
   Plug 'honza/vim-snippets' " Snippets
   Plug 'airblade/vim-rooter' " Project root
+  Plug 'ntpeters/vim-better-whitespace' " Remove / show whitespace
 
   " Start screen
   Plug 'mhinz/vim-startify'
@@ -64,7 +65,7 @@ endif
 " Git blame
 let g:gitblame_enabled = 0 " Disables lens by default (use GitBlameToggle)
 " Toggle lens with ctrl + g
-nnoremap <C-g> :GitBlameToggle <CR> 
+nnoremap <C-g> :GitBlameToggle <CR>
 
 " CoC
 let g:coc_global_extensions = [
@@ -94,3 +95,8 @@ let g:indentLine_enabled = 0
 let blacklist = ['py']
 autocmd BufWritePre * if index(blacklist, &ft) < 0 | IndentLinesDisable
 au BufEnter,BufNew *.py IndentLinesEnable
+
+" Better Whitespace
+let g:strip_whitespace_on_save = 1
+let g:strip_whitespace_confirm = 0
+let g:strip_whitelines_at_eof = 1
