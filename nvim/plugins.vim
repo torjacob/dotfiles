@@ -16,7 +16,8 @@ call plug#begin() " Vim-plug
   Plug 'tpope/vim-fugitive' " Useful git commands in vim
   Plug 'jreybert/vimagit' " View git status in buffer
   Plug 'mhinz/vim-signify' " Show changes in gutter
-  Plug 'APZelos/blamer.nvim' " Show git blame
+  Plug 'f-person/git-blame.nvim' " Show git blame lens
+  " Plug 'APZelos/blamer.nvim' " Show git blame
 
   " Autocomplete
   Plug 'neoclide/coc.nvim', { 'branch': 'release' } " Language server and more
@@ -60,8 +61,7 @@ if (has("termguicolors")) " Checks for 24 bit color support
 endif
 
 " Git blame
-let g:blamer_enabled = 1
-let g:blamer_delay = 500
+let g:gitblame_enabled = 0 " Disables lens by default (use GitBlameToggle)
 
 " CoC
 let g:coc_global_extensions = [
