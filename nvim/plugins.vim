@@ -79,17 +79,7 @@ let g:coc_global_extensions = [
   \]
 
 " Treesitter
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained",
-  highlight = {
-    enable = true,
-  },
-  indent = {
-    enable = true,
-  }
-}
-EOF
+source $HOME/.config/nvim/treesitter.lua
 
 " LaTeX Live preview
 let g:livepreview_previewer = 'zathura'
