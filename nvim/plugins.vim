@@ -34,6 +34,7 @@ call plug#begin('~/.local/share/nvim/plugged') " Vim-plug
   Plug 'junegunn/goyo.vim' " Focused mode
   Plug 'Yggdroot/indentLine' " Indent-lines for Python
   Plug 'jiangmiao/auto-pairs' " Auto pairs
+  Plug 'honza/vim-snippets' " Snippets
 
   " Start screen
   Plug 'mhinz/vim-startify'
@@ -77,6 +78,7 @@ let g:coc_global_extensions = [
   \ 'coc-json',
   \ 'coc-tsserver',
   \ 'coc-java',
+  \ 'coc-snippets',
   \]
 
 " Treesitter
