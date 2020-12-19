@@ -40,6 +40,10 @@ call plug#begin('~/.local/share/nvim/plugged') " Vim-plug
   " Start screen
   Plug 'mhinz/vim-startify'
 
+  " Fzf
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
 " Plugin config
