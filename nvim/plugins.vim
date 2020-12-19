@@ -58,6 +58,7 @@ hi Normal ctermbg=Black
 
 " Git blame
 let g:blamer_enabled = 1
+let g:blamer_delay = 500
 
 " CoC
 let g:coc_global_extensions = [
