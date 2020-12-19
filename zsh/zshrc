@@ -4,6 +4,10 @@ path+=('/home/torjacob/.local/bin/')
 path+=('/home/torjacob/repos/personal/scripts')
 export PATH
 
+export EDITOR='/usr/bin/nvim'
+export TERMINAL='alacritty'
+export BROWSER='firefox'
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.config/zsh/histfile
 HISTSIZE=10000
@@ -35,5 +39,3 @@ RPROMPT='%F{240}%T%f'
 
 # Aliases
 source '/home/torjacob/repos/personal/dotfiles/zsh/aliases'
-
-# commands on new prompt
