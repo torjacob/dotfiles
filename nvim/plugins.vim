@@ -115,6 +115,7 @@ let g:livepreview_previewer = 'zathura'
 " Indentline
 let g:indentLine_setColors = 0
 let g:indentLine_enabled = 0
+let g:indentLine_char = '┆'
 let blacklist = ['py']
 autocmd BufWritePre * if index(blacklist, &ft) < 0 | IndentLinesDisable
 au BufEnter,BufNew *.py IndentLinesEnable
