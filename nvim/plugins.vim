@@ -2,6 +2,7 @@ call plug#begin('~/.local/share/nvim/plugged') " Vim-plug
 
   " Statusbar
   Plug 'itchyny/lightline.vim' " Lightweight statusbar
+  Plug 'mengelbrecht/lightline-bufferline' " Adds devicons etc.
 
   " Filetree
   Plug 'preservim/nerdtree' " Show filetree
@@ -49,8 +50,37 @@ call plug#end()
 " Plugin config
 
 " Lightline
-let g:lightline = {}
-let g:lightline.colorscheme = 'gruvbox'
+let g:lightline = {
+      \ 'colorscheme': 'gruvbox',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'tabline': {
+      \   'left': [ ['buffers'] ],
+      \   'right': [  ]
+      \ },
+      \ 'component_expand': {
+      \   'buffers': 'lightline#bufferline#buffers'
+      \ },
+      \ 'component_type': {
+      \   'buffers': 'tabsel'
+      \ },
+      \ 'component_function': {
+      \   'filetype': 'MyFiletype',
+      \   'fileformat': 'MyFileformat',
+      \   'gitbranch': 'fugitive#head',
+      \ }
+      \ }
+
+let g:lightline#bufferline#enable_devicons = 1
+
+function! MyFiletype()
+  return winwidth(0) > 70 ? (strlen(&filetype) ? WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+endfunction
+
+function! MyFileformat()
+  return winwidth(0) > 70 ? (WebDevIconsGetFileFormatSymbol()) : ''
+endfunction
 
 " NERDTree
 nnoremap <C-n> :NERDTreeToggle <CR>
