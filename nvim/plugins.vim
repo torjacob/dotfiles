@@ -118,7 +118,7 @@ let g:coc_global_extensions = [
   \]
 
 " Treesitter
-source $HOME/.config/nvim/treesitter.lua
+luafile $HOME/.config/nvim/treesitter.lua
 
 " LaTeX Live preview
 let g:livepreview_previewer = 'zathura'
