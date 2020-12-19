@@ -62,7 +62,8 @@ endif
 
 " Git blame
 let g:gitblame_enabled = 0 " Disables lens by default (use GitBlameToggle)
-
+" Toggle lens with ctrl + g
+nnoremap <C-g> :GitBlameToggle <CR> 
 " CoC
 let g:coc_global_extensions = [
   \ 'coc-clangd',
@@ -90,4 +91,3 @@ let g:indentLine_enabled = 0
 let blacklist = ['py']
 autocmd BufWritePre * if index(blacklist, &ft) < 0 | IndentLinesDisable
 au BufEnter,BufNew *.py IndentLinesEnable
-
