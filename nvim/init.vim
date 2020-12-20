@@ -75,6 +75,12 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" Better terminal panel escape
+tnoremap <Esc> <c-\><c-n>
+
+" Open terminal in panel below
+nnoremap # :TermPanel <CR>
+
 " Autocommands
 au! BufWritePost $MYVIMRC source % " Automatically sourcing init.vim
 
@@ -83,3 +89,9 @@ augroup TerminalStuff
    au!
   autocmd TermOpen * setlocal nonumber norelativenumber
 augroup END
+
+" Custom commands
+" TODO: Create functions which open, close, and toggle termpanel
+" Takes if it should be a verticale or horizontal split
+" Takes size of panel
+command TermPanel :6sp | :terminal

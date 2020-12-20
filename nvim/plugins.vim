@@ -5,6 +5,7 @@ call plug#begin('~/.local/share/nvim/plugged') " Vim-plug
 
   " Filetree
   Plug 'preservim/nerdtree' " Show filetree
+  Plug 'Xuyuanp/nerdtree-git-plugin' " Show Git changes in filetree
   Plug 'ryanoasis/vim-devicons' " Icons for filetree
 
   " Colorscheme
@@ -75,6 +76,8 @@ endfunction
 nnoremap <C-n> :NERDTreeToggle <CR>
 let g:NERDTreeDirArrowExpandable = '' " Hide arrows
 let g:NERDTreeDirArrowCollapsible = '' " Hide arrows
+let NERDTreeQuitOnOpen = 1 " Close Tree on file open
+let NERDTreeMinimalUI = 1 " Remove ? on top of tree
 
 " Gruvbox
 syntax on
