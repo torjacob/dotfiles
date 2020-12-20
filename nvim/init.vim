@@ -47,7 +47,7 @@ set timeoutlen=500
 
 set clipboard=unnamedplus
 
-cmap w!! w !sudi tee %
+cmap w!! w !sudo tee %
 
 " Keybindings
 
