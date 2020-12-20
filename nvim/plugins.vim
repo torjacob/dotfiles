@@ -116,8 +116,9 @@ let g:livepreview_previewer = 'zathura'
 let g:indentLine_setColors = 0
 let g:indentLine_enabled = 0
 let g:indentLine_char = '┆'
+" Enable for python, disable for everything else
 let blacklist = ['py']
-autocmd BufWritePre * if index(blacklist, &ft) < 0 | IndentLinesDisable
+au BufWritePre * if index(blacklist, &ft) < 0 | IndentLinesDisable
 au BufEnter,BufNew *.py IndentLinesEnable
 
 " Better Whitespace
