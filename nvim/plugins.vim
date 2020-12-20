@@ -79,8 +79,6 @@ let g:NERDTreeDirArrowCollapsible = '' " Hide arrows
 let NERDTreeMinimalUI = 1 " Remove ? on top of tree
 let NERDTreeAutoDeleteBuffer = 1 " Delete buffer of file deleted in tree
 let NERDTreeQuitOnOpen = 1 " Close Tree on file open
-" Close vim if only nerdtree is left
-au bufenter * if (winnr(“$”) == 1 && exists(“b:NERDTreeType”) && b:NERDTreeType == “primary”) | q | endif
 
 " Gruvbox
 syntax on
