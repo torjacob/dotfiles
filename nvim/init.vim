@@ -77,3 +77,9 @@ nnoremap <C-l> <C-w>l
 
 " Autocommands
 au! BufWritePost $MYVIMRC source % " Automatically sourcing init.vim
+
+" Turn off linenumbers for terminal
+augroup TerminalStuff
+   au!
+  autocmd TermOpen * setlocal nonumber norelativenumber
+augroup END
