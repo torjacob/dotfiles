@@ -54,43 +54,6 @@ let g:airline#extensions#tabline#left_alt_sep = '|' " Straight tabs
 let g:airline_section_z = '%p%% ☰ %l/%L :%c'
 let g:airline_theme = 'base16_gruvbox_dark_hard'
 
-" Filetree
-nnoremap <C-n> :CocCommand explorer <CR>
-nmap <space>f :CocCommand explorer --preset floating<CR>
-let g:coc_explorer_global_presets = {
-\   '.vim': {
-\     'root-uri': '~/.vim',
-\   },
-\   'tab': {
-\     'position': 'tab',
-\     'quit-on-open': v:true,
-\   },
-\   'floating': {
-\     'position': 'floating',
-\     'open-action-strategy': 'sourceWindow',
-\   },
-\   'floatingTop': {
-\     'position': 'floating',
-\     'floating-position': 'center-top',
-\     'open-action-strategy': 'sourceWindow',
-\   },
-\   'floatingLeftside': {
-\     'position': 'floating',
-\     'floating-position': 'left-center',
-\     'floating-width': 50,
-\     'open-action-strategy': 'sourceWindow',
-\   },
-\   'floatingRightside': {
-\     'position': 'floating',
-\     'floating-position': 'right-center',
-\     'floating-width': 50,
-\     'open-action-strategy': 'sourceWindow',
-\   },
-\   'simplify': {
-\     'file-child-template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
-\   }
-\ }
-
 " Gruvbox
 let g:nvcode_termcolors=256
 syntax on
@@ -107,21 +70,7 @@ let g:gitblame_enabled = 0 " Disables lens by default (use GitBlameToggle)
 nnoremap <C-g> :GitBlameToggle <CR>
 
 " CoC
-let g:coc_global_extensions = [
-  \ 'coc-clangd',
-  \ 'coc-python',
-  \ 'coc-vimtex',
-  \ 'coc-html',
-  \ 'coc-css',
-  \ 'coc-lua',
-  \ 'coc-prettier',
-  \ 'coc-eslint',
-  \ 'coc-json',
-  \ 'coc-tsserver',
-  \ 'coc-java',
-  \ 'coc-snippets',
-  \ 'coc-explorer',
-  \]
+source $HOME/.config/nvim/coc.vim
 
 " Treesitter
 luafile $HOME/.config/nvim/treesitter.lua
