@@ -45,52 +45,13 @@ call plug#begin('~/.local/share/nvim/plugged') " Vim-plug
 
 call plug#end()
 
-" Plugin config
-
-" Airline
-let g:airline#extensions#tabline#enabled = 1 " Automatically display all buffers when there's only one tab open
-let g:airline#extensions#tabline#left_sep = ' ' " Straight tabs
-let g:airline#extensions#tabline#left_alt_sep = '|' " Straight tabs
-let g:airline_section_z = '%p%% ☰ %l/%L :%c'
-let g:airline_theme = 'base16_gruvbox_dark_hard'
-
-" Gruvbox
-let g:nvcode_termcolors=256
-syntax on
-colorscheme gruvbox
-
-if (has("termguicolors")) " Checks for 24 bit color support
-    set termguicolors
-    hi LineNr ctermbg=NONE guibg=NONE
-endif
-
-" Git blame
-let g:gitblame_enabled = 0 " Disables lens by default (use GitBlameToggle)
-" Toggle lens with ctrl + g
-nnoremap <C-g> :GitBlameToggle <CR>
-
-" CoC
-source $HOME/.config/nvim/coc.vim
-
-" Treesitter
-luafile $HOME/.config/nvim/treesitter.lua
-
-" LaTeX Live preview
-let g:livepreview_previewer = 'zathura'
-
-" Indentline
-let g:indentLine_setColors = 0
-let g:indentLine_enabled = 0
-let g:indentLine_char = '┆'
-" Enable for python, disable for everything else
-let blacklist = ['py']
-au BufWritePre * if index(blacklist, &ft) < 0 | IndentLinesDisable
-au BufEnter,BufNew *.py IndentLinesEnable
-
-" Better Whitespace
-let g:strip_whitespace_on_save = 1
-let g:strip_whitespace_confirm = 0
-let g:strip_whitelines_at_eof = 1
-
-" Startify
-let g:webdevicons_enable_startify = 1
+" Sourcing plugin configs
+source $HOME/.config/nvim/plugins/airline.vim
+source $HOME/.config/nvim/plugins/gruvbox.vim
+source $HOME/.config/nvim/plugins/git-blame.vim
+source $HOME/.config/nvim/plugins/coc.vim
+luafile $HOME/.config/nvim/plugins/treesitter.lua
+source $HOME/.config/nvim/plugins/vim-latex-live-preview.vim
+source $HOME/.config/nvim/plugins/indentLine.vim
+source $HOME/.config/nvim/plugins/vim-better-whitespace.vim
+source $HOME/.config/nvim/plugins/vim-startify.vim
