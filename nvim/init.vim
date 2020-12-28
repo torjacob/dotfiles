@@ -1,7 +1,7 @@
 " TJs INIT.VIM
 
 " Loading and configuring plugins
-source $HOME/.config/nvim/plugins.vim
+source $HOME/.config/nvim/plug.vim
 
 " General settings
 let g:mapleaderkey = "\<Space>"
