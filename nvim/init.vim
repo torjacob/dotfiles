@@ -1,5 +1,3 @@
-" TJs INIT.VIM
-
 " Loading and configuring plugins
 source $HOME/.config/nvim/plug.vim
 
@@ -30,7 +28,6 @@ set relativenumber
 set splitbelow
 set splitright
 
-" set showtabline=2 " Don't relly know what i prefer
 set tabstop=2
 set shiftwidth=2
 set smarttab
