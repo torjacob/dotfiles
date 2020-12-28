@@ -22,7 +22,6 @@ set smartindent
 set noshowmode
 set conceallevel=0
 set updatetime=100
-set timeoutlen=500
 set clipboard=unnamedplus
 
 cmap w!! w !sudo tee %
@@ -36,9 +35,9 @@ nnoremap <M-h>    :vertical resize -2<CR>
 nnoremap <M-l>    :vertical resize +2<CR>
 
 " TAB in general mode will move to text buffer
-nnoremap <TAB> gt
+nnoremap <silent> <TAB> :bnext<CR>
 " SHIFT-TAB will go back
-nnoremap <S-TAB> gT
+nnoremap <silent> <S-TAB> :bprevious<CR>
 
 " <TAB>: completion.
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
