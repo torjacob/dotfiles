@@ -76,6 +76,7 @@ let NERDTreeAutoDeleteBuffer = 1 " Delete buffer of file deleted in tree
 let NERDTreeQuitOnOpen = 1 " Close Tree on file open
 
 " Gruvbox
+let g:nvcode_termcolors=256
 syntax on
 colorscheme gruvbox
 
