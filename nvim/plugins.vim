@@ -1,7 +1,7 @@
 call plug#begin('~/.local/share/nvim/plugged') " Vim-plug
 
   " Statusbar
-  Plug 'itchyny/lightline.vim' " Lightweight statusbar
+  Plug 'vim-airline/vim-airline' " Lightweight statusbar
 
   " Filetree
   Plug 'preservim/nerdtree' " Show filetree
@@ -10,7 +10,7 @@ call plug#begin('~/.local/share/nvim/plugged') " Vim-plug
 
   " Colorscheme
   Plug 'christianchiarulli/nvcode-color-schemes.vim' " Gruvbox with treesitter support
-  Plug 'shinchu/lightline-gruvbox.vim' " Gruvbox for statusbar
+  Plug 'vim-airline/vim-airline-themes' " Colors for statusbar
   Plug 'vwxyutarooo/nerdtree-devicons-syntax' " Colors for filetree
 
   " Git
@@ -52,18 +52,11 @@ call plug#end()
 
 " Plugin config
 
-" Lightline
-let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'filetype': 'MyFiletype',
-      \   'fileformat': 'MyFileformat',
-      \   'gitbranch': 'fugitive#head',
-      \ }
-      \ }
+" Airline
+let g:airline#extensions#tabline#enabled = 1 " Automatically display all buffers when there's only one tab open
+let g:airline#extensions#tabline#left_sep = ' ' " Straight tabs
+let g:airline#extensions#tabline#left_alt_sep = '|' " Straight tabs
+
 
 let g:lightline#bufferline#enable_devicons = 1
 
