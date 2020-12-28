@@ -45,6 +45,9 @@ call plug#begin('~/.local/share/nvim/plugged') " Vim-plug
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
 
+  " Debugging
+  Plug 'puremourning/vimspector'
+
 call plug#end()
 
 " Plugin config
