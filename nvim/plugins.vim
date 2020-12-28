@@ -59,14 +59,6 @@ let g:airline#extensions#tabline#left_alt_sep = '|' " Straight tabs
 let g:airline_section_z = '%p%% ☰ %l/%L :%c'
 let g:airline_theme = 'base16_gruvbox_dark_hard'
 
-function! MyFiletype()
-  return winwidth(0) > 70 ? (strlen(&filetype) ? WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
-endfunction
-
-function! MyFileformat()
-  return winwidth(0) > 70 ? (WebDevIconsGetFileFormatSymbol()) : ''
-endfunction
-
 " NERDTree
 nnoremap <C-n> :NERDTreeToggle <CR>
 let g:NERDTreeDirArrowExpandable = '' " Hide arrows
