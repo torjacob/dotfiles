@@ -46,17 +46,16 @@ call plug#begin('~/.local/share/nvim/plugged') " Vim-plug
 call plug#end()
 
 " Sourcing plugin configs
-function! SourceDirectory(file)
-  for s:fpath in split(globpath(a:file, '*.vim'), '\n')
-    exe 'source' s:fpath
+function! SourceDirectory(file, filetype)
+  if a:filetype == '*.vim'
+    let commandtype = 'source'
+  elseif a:filetype == '*.lua'
+    let commandtype = 'luafile'
+  endif
+  for s:fpath in split(globpath(a:file, a:filetype), '\n')
+    exe commandtype s:fpath
   endfor
 endfunction
 
-function! LuafileDirectory(file)
-  for s:fpath in split(globpath(a:file, '*.lua'), '\n')
-    exe 'luafile' s:fpath
-  endfor
-endfunction
-
-call SourceDirectory('~/.config/nvim/plugins')
-call LuafileDirectory('~/config/nvim/lua')
+call SourceDirectory('~/.config/nvim/plugins', '*.vim')
+call SourceDirectory('~/config/nvim/lua', '*.lua')
