@@ -3,11 +3,6 @@ call plug#begin('~/.local/share/nvim/plugged') " Vim-plug
   " Statusbar
   Plug 'vim-airline/vim-airline' " Lightweight statusbar
 
-  " Filetree
-  Plug 'preservim/nerdtree' " Show filetree
-  Plug 'Xuyuanp/nerdtree-git-plugin' " Show Git changes in filetree
-  Plug 'ryanoasis/vim-devicons' " Icons for filetree
-
   " Colorscheme
   Plug 'christianchiarulli/nvcode-color-schemes.vim' " Gruvbox with treesitter support
   Plug 'vim-airline/vim-airline-themes' " Colors for statusbar
@@ -59,13 +54,42 @@ let g:airline#extensions#tabline#left_alt_sep = '|' " Straight tabs
 let g:airline_section_z = '%p%% ☰ %l/%L :%c'
 let g:airline_theme = 'base16_gruvbox_dark_hard'
 
-" NERDTree
-nnoremap <C-n> :NERDTreeToggle <CR>
-let g:NERDTreeDirArrowExpandable = '' " Hide arrows
-let g:NERDTreeDirArrowCollapsible = '' " Hide arrows
-let NERDTreeMinimalUI = 1 " Remove ? on top of tree
-let NERDTreeAutoDeleteBuffer = 1 " Delete buffer of file deleted in tree
-let NERDTreeQuitOnOpen = 1 " Close Tree on file open
+" Filetree
+nnoremap <C-n> :CocCommand explorer <CR>
+nmap <space>f :CocCommand explorer --preset floating<CR>
+let g:coc_explorer_global_presets = {
+\   '.vim': {
+\     'root-uri': '~/.vim',
+\   },
+\   'tab': {
+\     'position': 'tab',
+\     'quit-on-open': v:true,
+\   },
+\   'floating': {
+\     'position': 'floating',
+\     'open-action-strategy': 'sourceWindow',
+\   },
+\   'floatingTop': {
+\     'position': 'floating',
+\     'floating-position': 'center-top',
+\     'open-action-strategy': 'sourceWindow',
+\   },
+\   'floatingLeftside': {
+\     'position': 'floating',
+\     'floating-position': 'left-center',
+\     'floating-width': 50,
+\     'open-action-strategy': 'sourceWindow',
+\   },
+\   'floatingRightside': {
+\     'position': 'floating',
+\     'floating-position': 'right-center',
+\     'floating-width': 50,
+\     'open-action-strategy': 'sourceWindow',
+\   },
+\   'simplify': {
+\     'file-child-template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
+\   }
+\ }
 
 " Gruvbox
 let g:nvcode_termcolors=256
@@ -96,6 +120,7 @@ let g:coc_global_extensions = [
   \ 'coc-tsserver',
   \ 'coc-java',
   \ 'coc-snippets',
+  \ 'coc-explorer',
   \]
 
 " Treesitter
