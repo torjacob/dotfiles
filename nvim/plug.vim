@@ -46,12 +46,17 @@ call plug#begin('~/.local/share/nvim/plugged') " Vim-plug
 call plug#end()
 
 " Sourcing plugin configs
-source $HOME/.config/nvim/plugins/airline.vim
-source $HOME/.config/nvim/plugins/gruvbox.vim
-source $HOME/.config/nvim/plugins/git-blame.vim
-source $HOME/.config/nvim/plugins/coc.vim
-luafile $HOME/.config/nvim/plugins/treesitter.lua
-source $HOME/.config/nvim/plugins/vim-latex-live-preview.vim
-source $HOME/.config/nvim/plugins/indentLine.vim
-source $HOME/.config/nvim/plugins/vim-better-whitespace.vim
-source $HOME/.config/nvim/plugins/vim-startify.vim
+function! SourceDirectory(file)
+  for s:fpath in split(globpath(a:file, '*.vim'), '\n')
+    exe 'source' s:fpath
+  endfor
+endfunction
+
+function! LuafileDirectory(file)
+  for s:fpath in split(globpath(a:file, '*.lua'), '\n')
+    exe 'luafile' s:fpath
+  endfor
+endfunction
+
+call SourceDirectory('~/.config/nvim/plugins')
+call LuafileDirectory('~/config/nvim/lua')
