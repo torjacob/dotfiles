@@ -2,37 +2,37 @@
 source $HOME/.config/nvim/plug.vim
 
 " General settings
+" Note: Settings which are enabled by default in nvim are excluded.
+" See: :help nvim-defaults
+
 let g:mapleaderkey = "\<Space>"
 
-set hidden
-set pumheight=10
-set background=dark
-set t_Co=256
-set cursorline
-set colorcolumn=80
-set linebreak
-set number relativenumber
-set splitbelow
-set splitright
-set tabstop=2
+set hidden                  " Required for multiple buffers
+set pumheight=10            " Smaller pop-up menu
+set t_Co=256                " Support 256 colors
+set cursorline              " Highligt cursorline
+set colorcolumn=80          " Show 80th column
+set linebreak               " Wrap lines in natural place
+set number relativenumber   " Show linenumbers
+set splitright splitbelow   " Natural splits
+set tabstop=2               " Tab-width
 set shiftwidth=2
-set smarttab
 set expandtab
-set smartindent
-set noshowmode
-set conceallevel=0
-set updatetime=100
-set clipboard=unnamedplus
+set smartindent             " Automatically adds extra indents
+set noshowmode              " Hide modes etc. (Shown in statusbar)
+set conceallevel=0          " Visible '' in markdown
+set updatetime=100          " Async. updates
+set scrolloff=1             " Min. number of lines to show around cursor
 
 cmap w!! w !sudo tee %
 
 " Keybindings
 
 " Use alt + hjkl to resize windows
-nnoremap <M-j>    :resize -2<CR>
-nnoremap <M-k>    :resize +2<CR>
-nnoremap <M-h>    :vertical resize -2<CR>
-nnoremap <M-l>    :vertical resize +2<CR>
+nnoremap <silent> <M-j>    :resize -2<CR>
+nnoremap <silent> <M-k>    :resize +2<CR>
+nnoremap <silent> <M-h>    :vertical resize -2<CR>
+nnoremap <silent> <M-l>    :vertical resize +2<CR>
 
 " TAB in general mode will move to text buffer
 nnoremap <silent> <TAB> :bnext<CR>
