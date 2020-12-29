@@ -16,8 +16,8 @@ set linebreak               " Wrap lines in natural place
 set number relativenumber   " Show linenumbers
 set splitright splitbelow   " Natural splits
 set tabstop=2               " Tab-width
-set shiftwidth=2
-set expandtab
+set shiftwidth=2            " Tab-indent width
+set expandtab               " Convert tabs to spaces
 set smartindent             " Automatically adds extra indents
 set noshowmode              " Hide modes etc. (Shown in statusbar)
 set conceallevel=0          " Visible '' in markdown
