@@ -16,8 +16,8 @@ let g:coc_global_extensions = [
   \]
 
 " Explorer
-nnoremap <C-n> :CocCommand explorer <CR>
-nmap <space>f :CocCommand explorer --preset floating<CR>
+nnoremap <silent> <C-n> :CocCommand explorer <CR>
+nmap <silent> <space>f :CocCommand explorer --preset floating<CR>
 let g:coc_explorer_global_presets = {
 \   '.vim': {
 \     'root-uri': '~/.vim',

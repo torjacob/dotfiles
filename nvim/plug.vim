@@ -6,7 +6,6 @@ call plug#begin('~/.local/share/nvim/plugged') " Vim-plug
   " Colorscheme
   Plug 'christianchiarulli/nvcode-color-schemes.vim' " Gruvbox with treesitter support
   Plug 'vim-airline/vim-airline-themes' " Colors for statusbar
-  Plug 'vwxyutarooo/nerdtree-devicons-syntax' " Colors for filetree
 
   " Git
   Plug 'tpope/vim-fugitive' " Useful git commands in vim
