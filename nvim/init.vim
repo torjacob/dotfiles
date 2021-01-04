@@ -64,7 +64,7 @@ au! BufWritePost $MYVIMRC source % " Automatically sourcing init.vim
 
 " Turn off linenumbers for terminal
 augroup TerminalStuff
-   au!
+  au!
   autocmd TermOpen * setlocal nonumber norelativenumber
 augroup END
 
