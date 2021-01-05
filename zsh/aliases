@@ -38,8 +38,6 @@ alias vim='nvim'
 alias vi='nvim'
 alias v='nvim'
 
-alias nvimconf='nvim ~/repos/personal/dotfiles/nvim/'
-
 # GIT aliases
 alias g='git'
 alias gua='git remote | xargs -L1 git push --all'
@@ -49,8 +47,10 @@ alias yt='youtube-dl --add-metadata -i'
 alias yta='yt -x -f bestaudio/best'
 alias ytc='youtube-dl -f "bestvideo[height>=720]+bestaudio/best" -ciw -o "%(title)s.%(ext)s" -v'
 
+# Mpv aliases
 alias play='mpv --fs "$1" & disown'
 
+# Colorizing normal commands
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 alias ccat='highlight --out-format=ansi'
