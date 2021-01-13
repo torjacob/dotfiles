@@ -1,6 +1,7 @@
 ### ALIASES ###
 
 alias sdn='sudo shutdown -h now'
+alias srb='sudo reboot'
 
 alias p='paru'
 
@@ -22,6 +23,7 @@ alias ds='du -csh'
 alias dss='du -hs * | sort -h'
 alias dts='dss; ds; df -h /'
 
+# Network aliases
 alias myip='curl ipinfo.io/ip'
 
 # Ultralist aliases
