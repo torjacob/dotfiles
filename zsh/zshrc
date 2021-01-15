@@ -38,4 +38,4 @@ PROMPT='%F{240}%B%~${(r:$((COLUMNS-($pwdsize+$gitsize))):)}$vcs_info_msg_0_
 RPROMPT='%F{240}%T%f'
 
 # Aliases
-source '/home/torjacob/repos/personal/dotfiles/zsh/aliases'
+source '/home/torjacob/.config/zsh/aliases'
