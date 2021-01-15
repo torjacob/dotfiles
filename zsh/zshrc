@@ -1,7 +1,7 @@
 # Path expansion
-path+=('/home/torjacob/repos/personal/scripts/statusbar')
-path+=('/home/torjacob/.local/bin/')
-path+=('/home/torjacob/repos/personal/scripts')
+path+=("$HOME/repos/personal/scripts/statusbar")
+path+=("$HOME/.local/bin/")
+path+=("$HOME/repos/personal/scripts")
 export PATH
 
 export EDITOR='/usr/bin/nvim'
@@ -38,4 +38,4 @@ PROMPT='%F{240}%B%~${(r:$((COLUMNS-($pwdsize+$gitsize))):)}$vcs_info_msg_0_
 RPROMPT='%F{240}%T%f'
 
 # Aliases
-source '/home/torjacob/.config/zsh/aliases'
+source "$HOME/.config/zsh/aliases"
