@@ -1,3 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/torjacob/.cargo/git/checkouts/crossfont-ce4774234e547836/e5f30fc/src'
+let g:netrw_dirhist_6='/home/torjacob/.cargo/git/checkouts/crossfont-ce4774234e547836/e5f30fc'
+let g:netrw_dirhist_5='/home/torjacob/.cargo/git/checkouts/crossfont-ce4774234e547836'
+let g:netrw_dirhist_4='/home/torjacob/.cargo/git/checkouts'
+let g:netrw_dirhist_3='/home/torjacob/.cargo/git'
+let g:netrw_dirhist_2='/home/torjacob/.cargo'
 let g:netrw_dirhist_1='/home/torjacob/repos/personal/dotfiles/zsh'

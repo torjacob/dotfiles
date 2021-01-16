@@ -17,7 +17,7 @@ call plug#begin('~/.local/share/nvim/plugged') " Vim-plug
   Plug 'neoclide/coc.nvim', { 'branch': 'release' } " Language server and more
 
   " Syntax Highlighting
-  Plug 'nvim-treesitter/nvim-treesitter' " Multilevel syntax (req. nightly)
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " Multilevel syntax (req. nightly)
 
   " LaTeX
   Plug 'lervag/vimtex' " Syntax for LaTeX

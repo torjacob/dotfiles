@@ -11,6 +11,8 @@ alias ll='exa -l --group-directories-first'
 alias lla='exa -la --group-directories-first'
 alias lm='exa -t -1'
 
+alias tree='exa --tree'
+
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -v'
@@ -25,11 +27,6 @@ alias dts='dss; ds; df -h /'
 
 # Network aliases
 alias myip='curl ipinfo.io/ip'
-
-# Ultralist aliases
-alias ull='ultralist list'
-alias ula='ultralist add'
-alias ulc='ultralist c'
 
 # Code aliases
 alias codium='codium .'
@@ -50,7 +47,7 @@ alias yta='yt -x -f bestaudio/best'
 alias ytc='youtube-dl -f "bestvideo[height>=720]+bestaudio/best" -ciw -o "%(title)s.%(ext)s" -v'
 
 # Mpv aliases
-alias play='mpv --fs "$1" & disown'
+alias play='mpv --fs "$1" & disown' # Stopped working - not sure why
 
 # Colorizing normal commands
 alias grep='grep --color=auto'
