@@ -25,7 +25,7 @@ alias ds='du -csh'
 alias dss='du -hs * | sort -h'
 alias dts='dss; ds; df -h /'
 
-# Network aliases
+# Curl aliases
 alias myip='curl ipinfo.io/ip'
 
 # Code aliases
@@ -35,7 +35,8 @@ alias c='codium .'
 # NVIM aliases
 alias vim='nvim'
 alias vi='nvim'
-alias v='nvim'
+alias v='$EDITOR'
+alias e="$EDITOR"
 
 # GIT aliases
 alias g='git'
@@ -46,10 +47,9 @@ alias yt='youtube-dl --add-metadata -i'
 alias yta='yt -x -f bestaudio/best'
 alias ytc='youtube-dl -f "bestvideo[height>=720]+bestaudio/best" -ciw -o "%(title)s.%(ext)s" -v'
 
-# Mpv aliases
-alias play='mpv --fs "$1" & disown' # Stopped working - not sure why
-
 # Colorizing normal commands
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 alias ccat='highlight --out-format=ansi'
+
+alias reddit='rtv'

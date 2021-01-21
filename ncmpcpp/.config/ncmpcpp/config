@@ -24,7 +24,7 @@ user_interface = "alternative"
 follow_now_playing_lyrics = "yes"
 locked_screen_width_part = "60"
 
-main_window_highlight_color = "white"
+# main_window_highlight_color = "white"
 
 progressbar_elapsed_color = "white"
 progressbar_color = "black"

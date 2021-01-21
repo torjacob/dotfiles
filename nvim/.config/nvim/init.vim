@@ -23,6 +23,7 @@ set noshowmode              " Hide modes etc. (Shown in statusbar)
 set conceallevel=0          " Visible '' in markdown
 set updatetime=100          " Async. updates
 set scrolloff=1             " Min. number of lines to show around cursor
+set noswapfile              " Disable swap files
 set nobackup nowritebackup  " Recommended by coc
 
 cmap w!! w !sudo tee %
