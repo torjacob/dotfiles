@@ -26,7 +26,8 @@ alias dss='du -hs * | sort -h'
 alias dts='dss; ds; df -h /'
 
 # Curl aliases
-alias myip='curl ipinfo.io/ip'
+alias myip='curl ifconfig.co' # ipinfo.io/ip
+alias weather='curl wttr.in'
 
 # Code aliases
 alias codium='codium .'
