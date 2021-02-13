@@ -1,5 +1,7 @@
 ### ALIASES ###
 
+alias sudo='doas'
+
 alias sdn='sudo shutdown -h now'
 alias srb='sudo reboot'
 

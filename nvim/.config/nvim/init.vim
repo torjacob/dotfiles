@@ -25,6 +25,7 @@ set updatetime=100          " Async. updates
 set scrolloff=1             " Min. number of lines to show around cursor
 set noswapfile              " Disable swap files
 set nobackup nowritebackup  " Recommended by coc
+set lazyredraw              " Dont redraw screen until macros are done
 
 cmap w!! w !sudo tee %
 

@@ -19,9 +19,6 @@ export XDG_DATA_HOME="$HOME/.local/share"
 # ZSH related
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export HISTFILE="$XDG_DATA_HOME/zsh/history"
-HISTSIZE=10000
-SAVEHIST=10000
-LESSHISTFILE="/dev/null"
 
 # Making programs conform with xdg-standard
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
